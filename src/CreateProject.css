@@ -1,0 +1,82 @@
+.create-project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:baseline;
+    height: 100vh;
+    background-color: #fff; /* Black background */
+    margin-left: 20px;
+  }
+  
+  .title {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .form-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .section-number {
+    display: inline-block;
+    background-color: #3da35a; /* Green circle */
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+  }
+  
+  .input-field2 {
+    width: 300px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #309975; /* White button */
+    color: #000; /* Black text */
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ccc; /* Button hover effect */
+  }
