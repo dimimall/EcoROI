@@ -1,6 +1,9 @@
 import React from 'react';
 import './Navbar.css';
 import logo from './fad_logo_juice.svg';
+import MainBody from './MainBody.js';
+import HomePage from './HomePage.js';
+import Projects from './Projects.js';
 
 function Navbar() {
     return (
@@ -14,13 +17,13 @@ function Navbar() {
             <div className="navbar-center">
                 <ul className="nav-links">
                      <li>
-                        <a href="/products">About Us</a>
+                        <a href="./HomePage">About Us</a>
                     </li>
                     <li>
-                        <a href="/about">How it Works</a>
+                        <a href="./MainBody">How it Works</a>
                     </li>
                     <li>
-                        <a href="/contact">My projects</a>
+                        <a href="./Projects">My Projects</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>
