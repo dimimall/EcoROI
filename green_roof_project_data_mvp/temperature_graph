@@ -1,0 +1,47 @@
+import rasterio
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Function to calculate average temperature for a given season (Kelvin to Celsius)
+def calculate_seasonal_average(datacube, season_dates):
+    with rasterio.open(datacube) as dataset:
+        band1 = dataset.read(1)  # Read the first band
+        band1_celsius = band1 - 273.15  # Convert from Kelvin to Celsius
+        band1 = np.where(band1 <= 0, np.nan, band1_celsius)
+        return np.nanmean(band1)
+
+# Define the GeoTIFF file path (this should be the file for the entire year or each season)
+file_path = "Rhodes_Urban_LST.tif"
+
+# Define seasons and the corresponding data (dates are for illustrative purposes)
+seasons = ["Winter", "Spring", "Summer", "Autumn"]
+seasonal_data = {
+    "Winter": ["2023-01-01", "2023-03-31"],
+    "Spring": ["2023-04-01", "2023-06-30"],
+    "Summer": ["2023-07-01", "2023-09-30"],
+    "Autumn": ["2023-10-01", "2023-12-31"]
+}
+
+# Calculate seasonal averages (this assumes the GeoTIFF file covers the entire year)
+seasonal_averages = []
+for season in seasons:
+    avg_temp = calculate_seasonal_average(file_path, seasonal_data[season])
+    seasonal_averages.append(avg_temp)
+    print(f"Mean Temperature for {season}: {avg_temp:.2f} °C")
+
+# Define a target temperature for comparison (e.g., a desirable target for reducing urban heat)
+target_temperature = 30  # Example target temperature in Celsius
+
+# Plot the seasonal temperatures and the target temperature
+plt.figure(figsize=(8, 6))
+plt.plot(seasons, seasonal_averages, label="Average Seasonal Temperature", marker='o', color='b')
+plt.axhline(y=target_temperature, color='r', linestyle='--', label="Target Temperature")
+
+# Add labels and title
+plt.xlabel("Season")
+plt.ylabel("Temperature (°C)")
+plt.title("Seasonal Urban Heat Comparison in Rhodes")
+plt.legend()
+
+# Show the plot
+plt.show()
