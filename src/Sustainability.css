@@ -1,0 +1,45 @@
+.sustainability-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+  }
+  
+  .sustainability-content {
+    text-align: left;
+  }
+  
+  .sustainability-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .sustainability-text {
+    margin-top: 10px;
+    color: black;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .signup-btn {
+    background-color: black;
+    color: white;
+  }
+  
+  .learnmore-btn {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+  }

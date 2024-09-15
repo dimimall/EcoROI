@@ -1,0 +1,77 @@
+.footer {
+    background-color: #309975;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .subscribe-section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .footer-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .subscribe-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .subscribe-form button {
+    background-color: #d3ca83;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .privacy-text {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .links-section {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    min-width: 300px;
+  }
+  
+  .column {
+    margin: 0 20px;
+  }
+  
+  .column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .column ul li {
+    margin: 5px 0;
+    font-size: 14px;
+  }
